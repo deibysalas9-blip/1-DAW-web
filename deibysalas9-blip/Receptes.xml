@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Receptes>
+    <Recepta>
+        <Nom>Brebaje Sangriento</Nom>
+        <Valoració>4,5</Valoració>
+        <Dificultat>Facil</Dificultat>
+        <TempsPreparacio>5 minuts</TempsPreparacio>
+        <TempsTotal>5 minuts</TempsTotal>
+        <Racions>6 copas</Racions>
+        <Ingredients>
+            <Ingredient>50g - 60g de az</Ingredient>
+            <Ingredient>30g - 50g de jengibre fresco</Ingredient>
+            <Ingredient>2 limones</Ingredient>
+            <Ingredient>125g de arandanos fresos</Ingredient>
+            <Ingredient>1000g de zumo de arandanos rojos</Ingredient>
+            <Ingredient>1 lata de lichis en conserva</Ingredient>
+            <Ingredient>6 - 8 cubitos de hielo</Ingredient>
+        </Ingredients>
+        <InformacióNutricional>
+            <Racions>Por 6 vasos</Racions>
+            <Calories>794.3 kcal</Calories>
+            <Greixos>1.8 g</Greixos>
+            <Carbohidrats>192.1 g</Carbohidrats>
+            <Proteïnes>6.5 g</Proteïnes>
+            <Fibra>9.9 g</Fibra>
+        </InformacióNutricional>
+    </Recepta>
+    <Recepta>
+        <Nom>Cóctel cerebro de zombi</Nom>
+        <Valoració>4</Valoració>
+        <Dificultat>Facil</Dificultat>
+        <TempsPreparacio>5 minuts</TempsPreparacio>
+        <TempsTotal>5 minuts</TempsTotal>
+        <Racions>6 copas</Racions>
+        <Ingredients>
+            <Ingredient>200 g de vodka</Ingredient>
+            <Ingredient>1 - 2 chorritos de granadina</Ingredient>
+            <Ingredient>80 g de licor de naranja</Ingredient>
+            <Ingredient>2 cucharadas de azúcar</Ingredient>
+            <Ingredient>100 g de zumo de lima</Ingredient>
+            <Ingredient>350 g de cubitos de hielo</Ingredient>
+        </Ingredients>
+        <InformacióNutricional>
+            <Racions>Para 1 persona</Racions>
+            <Calories>126 kcal</Calories>
+            <Greixos>0 g</Greixos>
+            <Carbohidrats>8.8 g</Carbohidrats>
+            <Proteïnes>0.1 g</Proteïnes>
+            <Fibra>0.1 g</Fibra>
+        </InformacióNutricional>
+    </Recepta>
+</Receptes>
+    
