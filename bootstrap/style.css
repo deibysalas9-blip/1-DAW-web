@@ -1,0 +1,88 @@
+:root{
+  --bg:#f3f6f9;
+  --nav-bg:#071329;
+  --brand-gradient: linear-gradient(135deg,#4f46e5,#ff6a00);
+  --accent:#ff8a00;
+  --muted:#6b7280;
+  --table-head:#0b1b2b;
+}
+
+body{
+  background: var(--bg);
+  font-family: system-ui, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+  background: var(--nav-bg);
+}
+.navbar-brand{
+  font-weight:800;
+  background: var(--brand-gradient);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.nav-link{
+  color: #fff;
+}
+.nav-link.active{
+  color:#fff;
+  font-weight:600;
+}
+
+/* Hero */
+.hero{
+  padding:60px 0;
+  background:#fff;
+}
+
+/* Input */
+.input-group .btn{
+  background: var(--accent);
+  color:white;
+  font-weight:600;
+  border:none;
+}
+
+/* Cards */
+.card{
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+.avatar-gradient{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background: linear-gradient(135deg,#7c3aed,#fb923c);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-weight:700;
+}
+
+/* Tiers */
+.tier{
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:0.75rem;
+  font-weight:600;
+  color:white;
+}
+.tier-challenger{ background: linear-gradient(90deg,#ffcb00,#ff7a00); color:#071329;}
+.tier-grandmaster{ background: linear-gradient(90deg,#d946ef,#7c3aed);}
+.tier-master{ background: linear-gradient(90deg,#06b6d4,#0891b2);}
+.tier-diamond{ background: linear-gradient(90deg,#60a5fa,#3b82f6);}
+
+/* Table */
+.table thead{
+  background: var(--table-head);
+  color:white;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:20px;
+  color:var(--muted);
+}

@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/custom-font.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.foreground,
+.midground,
+.background, .cel, .terra {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ******************* */
+/*   HERBA PRIMERA     */
+/* ******************* */
+.foreground {
+  animation: parallax_herba1 linear 10s infinite both;
+  background: url("imatges/foreground_grass.png") 0 100% repeat-x;
+  z-index: 4;
+}
+
+@keyframes parallax_herba1 {
+  0% {
+    background-position: -3584px 100%;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+/* ******************* */
+/*   HERBA SEGONA      */
+/* ******************* */
+.midground {
+    background: url("imatges/midground_grass.png") 0 100% repeat-x;
+    z-index: 3;
+    animation: parallax_herba2 linear 10s infinite both;
+}
+
+@keyframes parallax_herba2 {
+    0% {
+        background-position: -2500px 100%;
+    }
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+/* ******************* */
+/*     MUNTANYES       */
+/* ******************* */
+.background {
+    z-index: 2;
+    background-image: url(imatges/background_mountain5.png), url(imatges/background_mountain4.png), url(imatges/background_mountain3.png), url(imatges/background_mountain2.png), url(imatges/background_mountain1.png);
+    background-repeat: repeat-x;
+    background-position: 0 100%;
+    animation: parallax_mountains linear 30s infinite both;
+}
+
+@keyframes parallax_mountains {
+    0% {
+        background-position: 0 100%, 0 100%, 0 100%, 0 100%, 0 100%;
+    }
+    100% {
+        background-position: -2000px 100%, -1800px 100%, -1600px 100%, -1400px 100%, -1200px 100%;
+    }
+}
+
+/* ******************* */
+/*       NUVOL         */
+/* ******************* */
+#cloud {
+    position: relative;
+    top: 90px;
+    left: 0px;
+    opacity: 0;
+    z-index: 2;
+    animation: cloud-move 20s linear infinite, cloud-opacity 20s linear infinite;
+}
+
+@keyframes cloud-move {
+    0% {
+        transform: translateX(-300px);
+    }
+    100% {
+        transform: translateX(calc(100vw + 300px));
+    }
+}
+
+@keyframes cloud-opacity {
+    0%, 100% {
+        opacity: 0;
+    }
+    20%, 80% {
+        opacity: 1;
+    }
+}
+
+#cloud .cloud {
+  border-radius: 50%;
+  width: 160px;
+  height: 50px;
+  background: #fff;
+  position: absolute;
+  top: 10px;
+}
+
+#cloud .cloud-2 {
+  left: 50px;
+  top: 0;
+}
+
+#cloud .cloud-3 {
+  left: 110px;
+  top: 20px;
+}
+
+
+
+@keyframes sun-move {
+    0% {
+        transform: translateX(0) translateY(100px);
+    }
+    50% {
+        transform: translateX(-calc(100vw + 300px)) translateY(-30px);
+    }
+    100% {
+        transform: translateX(-calc(200vw + 600px)) translateY(100px);
+    }
+}
+
+
+/* ******************* */
+/*        SOL          */
+/* ******************* */
+
+  #sun {
+  position: absolute;
+  top: 700px;
+  width: 100px;
+  height: 100px;
+  background-color: #f1c40f;
+  border-radius: 50%;
+  box-shadow: 0px 0px 21px 1px rgba(241,196,15,1);
+    animation: sun-move 30s linear infinite, suncolor 30s linear infinite;
+  transform-origin: 730px 0px;
+  left: -2%;
+
+}
+
+
+@keyframes sun-move {
+
+    0% {
+      transform: rotate(0deg);
+
+    }
+    50%, 100% {
+      transform:rotate(200deg);
+}
+}
+
+@keyframes suncolor {
+    0%, 100% {
+        background: #ff7b00; /* Taronja */
+        box-shadow: 0 0 40px 15px rgba(255, 123, 0, 0.7);
+    }
+    30% {
+        background: #ffd630; /* Groc */
+        box-shadow: 0 0 40px 15px rgba(255, 214, 48, 0.7);
+    }
+    60% {
+        background: #ffa200; /* Vermellós */
+        box-shadow: 0 0 40px 15px rgba(255, 69, 0, 0.7);
+    }
+}
+
+
+
+/* ******************* */
+/*        LLUNA        */
+/* ******************* */
+
+#moon {
+    position: absolute;
+    opacity: 1;
+    top: 20px;
+    left: 50px;
+    z-index: 1;
+    animation: moon-appear ease infinite 30s;
+}
+
+@keyframes moon-move {
+    0% {
+      left: 0px;
+    }
+    100% {
+      left: 100px;
+    }
+}
+
+@keyframes moon-appear {
+    0%, 40% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#moon .moon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+}
+
+#moon .moon-2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #525252;
+    position: absolute;
+    top:-10px;
+    left: 25px;
+    animation: sky-color 30s ease infinite;
+}
+
+
+/* ******************* */
+/*        CEL          */
+/* ******************* */
+.cel {
+    z-index: 0;
+    background-color: #87CEEB;
+    animation: sky-color 30s ease infinite;
+}
+
+@keyframes sky-color {
+    0%, 30%, 100%{
+        background-color: #87CEEB; /* Dia */
+    }
+    45% {
+        background-color: #ff9800; /* Alba */
+    }
+    70% {
+        background-color: #1a237e; /* Nit */
+    }
+    95% {
+        background-color: #ff9800; /* Capvespre */
+    }
+}
+
+/* ******************* */
+/*        PANTERA      */
+/* ******************* */
+.tuna {
+    animation: walk-cycle 0.5s steps(12) infinite;
+    background: url(imatges/tuna_sprite.png) 0 0 no-repeat;
+    height: 200px;
+    width: 400px;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    margin-left: -200px;
+    transform: translateZ(0);
+    transition: animation 0.1s ease;
+}
+
+.tuna:hover {
+    animation: run-cycle 0.5s steps(12) infinite;
+}
+
+@keyframes walk-cycle {
+    0% {
+        background-position: -1200px 0px;
+    }
+    100% {
+        background-position: -1200px -2391px;
+    }
+}
+
+@keyframes run-cycle {
+    0% {
+        background-position: 0 0;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        background-position: 0 -2391px;
+        transform: translateX(0);
+    }
+}
+
+/* ******************* */
+/*        SASUKE       */
+/* ******************* */
+.sasuke {
+    animation: sasuke-walk-cycle 1s steps(6) infinite;
+    background: url(imatges/Sasuke.png) 0 0 no-repeat;
+    height: 190px;
+    width: 300px;
+    position: absolute;
+    bottom: 1px;
+    right: 5%;
+    transform: translateZ(0);
+    z-index: 3;
+}
+
+.sasuke:hover {
+    animation: sasuke-run-cycle 2s steps(6) infinite;  
+}
+
+@keyframes sasuke-walk-cycle {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -1014px;
+    }
+}
+
+@keyframes sasuke-run-cycle {
+    0% {
+        background-position: 0 0;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+    100% {
+        background-position: 0 -1014px;
+        transform: translateX(0);
+    }
+}

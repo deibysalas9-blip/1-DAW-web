@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantera al capvespre - Deiby Salas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to top, #87CEEB, #E0FFFF);
+      animation: celCicle 20s linear infinite;
+      height: 100vh;
+      position relative;
+    }
+
+    /* --- Cel --- */
+    @keyframes celCicle {
+      0%   { background: linear-gradient(to top, #fcb045, #fd1d1d); } /* Alba */
+      50%  { background: linear-gradient(to top, #87CEEB, #E0FFFF); } /* Migdia */
+      100% { background: linear-gradient(to top, #020024, #090979, #000000); } /* Nit */
+    }
+
+    /* --- Sol --- */
+    .sol {
+      position: absolute;
+      bottom: 10%;
+      right: -10%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: orange;
+      animation: solMoviment 20s linear infinite;
+    }
+
+    @keyframes solMoviment {
+      0% {
+        transform: translateX(0) translateY(100px);
+        background: orange;
+      }
+      25% {
+        transform: translateX(-25vw) translateY(-150px);
+        background: yellow;
+      }
+      50% {
+        transform: translateX(-50vw) translateY(100px);
+        background: orangered;
+      }
+      100% {
+        transform: translateX(-100vw) translateY(300px);
+        opacity: 0;
+      }
+    }
+
+    /* --- Lluna --- */
+    .lluna {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: lightgray;
+      opacity: 0;
+      animation: llunaSortir 20s linear infinite;
+    }
+
+    @keyframes llunaSortir {
+      0%, 50% { opacity: 0; }
+      60%, 100% { opacity: 1; }
+    }
+
+    /* --- Núvol --- */
+    .nuvol {
+      position: absolute;
+      top: 20%;
+      left: -200px;
+      width: 150px;
+      height: 80px;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 60px 20px 0 0 #fff, 120px 10px 0 0 #fff;
+      opacity: 0;
+      animation: nuvolMoviment 15s linear infinite;
+    }
+
+    @keyframes nuvolMoviment {
+      0%   { left: -200px; opacity: 0; }
+      20%  { opacity: 1; }
+      80%  { left: 100vw; opacity: 1; }
+      100% { left: 120vw; opacity: 0; }
+    }
+
+    /* --- Muntanyes --- */
+    .muntanya {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(to top, #2E8B57, #556B2F);
+      clip-path: polygon(0% 100%, 20% 60%, 40% 100%, 60% 60%, 80% 100%, 100% 70%, 100% 100%);
+      animation: muntanyaMoure 10s linear infinite alternate;
+    }
+
+    @keyframes muntanyaMoure {
+      from { transform: translateX(0); }
+      to { transform: translateX(-20px); }
+    }
+
+    /* --- Herba --- */
+    .herba {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 10%;
+      background: #228B22;
+      animation: herbaMoure 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes herbaMoure {
+      from { transform: skewX(0deg); }
+      to { transform: skewX(3deg); }
+    }
+
+    /* --- Pantera --- */
+    .pantera {
+      position: absolute;
+      bottom: 10%;
+      left: -100px;
+      width: 100px;
+      height: 50px;
+      background: black;
+      border-radius: 20px;
+      animation: panteraCorrer 20s linear infinite;
+    }
+
+    @keyframes panteraCorrer {
+      0% { left: -100px; transform: scale(1); }
+      50% { left: 50%; transform: scale(1); }
+      75% { left: 80%; transform: scale(1.2); } /* Comença a córrer */
+      100% { left: 120%; transform: scale(1.2); }
+    }
+
+    /* --- Cartell --- */
+    .cartell {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+    }
+
+    .cartell h1 {
+      font-family: 'Righteous', sans-serif;
+      font-size: 2em;
+      margin: 0;
+    }
+
+    .cartell p {
+      font-family: 'Courier New', monospace; /* Font pròpia del servidor */
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sol"></div>
+  <div class="lluna"></div>
+  <div class="nuvol"></div>
+  <div class="muntanya"></div>
+  <div class="herba"></div>
+  <div class="pantera"></div>
+  <div class="cartell">
+    <h1>Pantera al capvespre</h1>
+    <p>Deiby Salas</p>
+  </div>
+</body>
+</html>

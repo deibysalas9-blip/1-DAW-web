@@ -1,0 +1,59 @@
+.cara-1 {
+    justify-content: center;
+    align-items: center;
+}
+
+.cara-2 {
+    justify-content: space-between;
+}
+
+.cara-2 .punt:nth-child(2) {
+align-self: flex-end;
+}
+.cara-3 {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cara-3 .punt:nth-child(1) {
+    align-self: flex-start;
+}
+
+.cara-3 .punt:nth-child(3) {
+    align-self: flex-end;
+}
+
+.cara-4 {
+    justify-content: space-between;
+}
+
+.cara-4 .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cara-5 {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.cara-5 .columna{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cara-5 .columna:nth-child(2){
+    justify-content: center;
+}
+
+.cara-6 {
+    display: flex;
+    align-items:wrap;
+    justify-content: space-between;
+}
+.cara-6 .columna {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

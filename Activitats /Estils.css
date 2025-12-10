@@ -1,0 +1,26 @@
+#titol {color: rgb(99, 167, 143);}
+p strong {color: red;}
+.destacat {color: rgb(244, 201, 115);}
+
+#subtitol { color: red;}
+a { color: red;}
+em {color: blue;}
+span.especial {
+    color: rgb(114, 5, 114);
+    font-weight:bold;}
+#addicional {color: blue;}
+#especial {color: violet;}
+div a {color: green;}
+
+caption{color: blue;}
+tr {color: sandybrown;}
+td { color: green;}
+th {color: red;}
+th.especial {color: sandybrown;}
+
+strong {color: red;}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}

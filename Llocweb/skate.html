@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La meva web de Skate</title>
+  <link href="sk8.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="flex-bar">
+  <div class="top-left-img" aria-hidden="true">
+    <img src="imatges/Bomboclat.png" alt="" style="width:64px; height:64px; object-fit:contain; pointer-events:none; display:block;" />
+  </div>
+    <div class="menu-icon">
+      <a href="#" class="icon" id="boton-menu"><i class="fas fa-bars"></i></a>
+    </div>
+    <nav class="menu-nav" id="nav-menu">
+      <ul class="menu-ul">
+        <li class="menu-item"><a href="#inici">Skate</a></li>
+        <li class="menu-item"><a href="#info">Què fem?</a></li>
+        <li class="menu-item"><a href="#sobre">Sobre nosaltres</a></li>
+        <li class="menu-item"><a href="#contacte">Contacta'ns</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inici" class="skate-inici">
+    <h1>Benvingut al món del Skate.</h1>
+    <a href="#info" class="btn"> Comença </a>
+  </section>
+    <section id="historia" class="historia">
+        <h2>Història</h2>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2.5rem; max-width: 1000px; margin: 0 auto;">
+          <div style="flex:2; min-width:220px;">
+            <p>
+              El projecte de skate a Olot va néixer l'any 2018, quan un petit grup d'amics apassionats pel monopatí es trobaven cada tarda al parc de la ciutat. Amb el temps, la comunitat va créixer i es va fer evident la necessitat d'un espai segur i adaptat per practicar skate. Gràcies a la col·laboració amb l'ajuntament i el suport de moltes famílies, es va aconseguir construir un skatepark modern al cor d'Olot.
+            </p>
+            <p>
+              Avui, el nostre projecte no només fomenta l'esport, sinó també la inclusió, la creativitat i l'amistat entre joves de totes les edats. Organitzem esdeveniments, tallers i competicions que atrauen skaters d'arreu de Catalunya, convertint Olot en un referent del món del skate a la comarca de la Garrotxa.
+            </p>
+          </div>
+          <div style="flex:1; min-width:180px; display:flex; justify-content:center;">
+            <img src="imatges/skatee.png" alt="Skate Olot" style="max-width:260px; width:100%; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,0.13); object-fit:cover;" />
+          </div>
+        </div>
+    </section>
+
+  <section id="info" class="info">
+    <div class="info-flex">
+      <div class="info-text">
+        <h2>Què fem?</h2>
+        <p>Descobreix totes les activitats i modalitats que oferim per a skaters de tots els nivells. Organitzem classes, trobades, tallers i sortides per gaudir del skate en comunitat.</p>
+        <ul>
+          <li>Classes per a principiants i avançats</li>
+          <li>Sessions de skate lliure</li>
+          <li>Competicions locals</li>
+          <li>Tallers de manteniment i customització</li>
+        </ul>
+      </div>
+      <div class="Logo-Skate">
+        <img src="imatges/skate.jpg" alt="Skate activitat" style="max-width:320px; width:100%; height:auto; border-radius:14px; box-shadow:0 4px 18px rgba(0,0,0,0.10); object-fit:cover;" />
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="sobre">
+    <h2>Sobre nosaltres</h2>
+    <p>Som un grup d’apassionats del skate que volem compartir la nostra passió amb el món. Organitzem trobades, tallers i competicions locals.</p>
+    <p style="font-style:italic; color:#444; margin-top:1em;">Creiem en la comunitat, l’amistat i el respecte entre skaters. El nostre objectiu és fer créixer l’escena local i ajudar a tothom a millorar i gaudir del skate, sigui quin sigui el seu nivell.</p>
+    <h3>Trucs d'skate fàcils d'aprendre</h3>
+    <table class="taula-trucs" style="margin: 1.5em auto; border-collapse:collapse; min-width:320px; font-family: 'Georgia', 'Times New Roman', Times, serif;">
+      <thead>
+        <tr style="background:#eee;">
+          <th style="padding:8px 14px; border:1px solid #bbb;">Truc</th>
+          <th style="padding:8px 14px; border:1px solid #bbb;">Dificultat</th>
+          <th style="padding:8px 14px; border:1px solid #bbb;">Descripció</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Ollie</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Fàcil</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Salt bàsic amb el monopatí sense agafar-lo amb les mans.</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Shuvit</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Fàcil</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Fer girar la taula 180º sota els peus sense saltar gaire.</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Manual</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Fàcil</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Mantenir l’equilibri només amb les rodes del darrere.</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Kickturn</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Fàcil</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Girar ràpidament sobre la cua de la taula.</td>
+        </tr>
+        <tr>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Powerslide</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Fàcil</td>
+          <td style="padding:7px 12px; border:1px solid #ccc;">Frenar lliscant les rodes de costat.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+          
+  <section id="contacte" class="contacte">
+    <h2>Contacta'ns</h2>
+    <form class="formulari-contacte" autocomplete="off">
+      <label for="nom">Nom:</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Correu electrònic:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="missatge">Missatge:</label>
+      <textarea id="missatge" name="missatge" rows="4" required></textarea>
+
+      <button type="submit">Envia</button>
+    </form>
+    <p style="margin-top:1.5em;">O segueix-nos a les xarxes!</p>
+    <div class="xarxes">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 La meva web de Skate. Tots els drets reservats.</p>
+  </footer>
+
+  

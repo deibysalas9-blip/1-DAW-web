@@ -1,0 +1,366 @@
+/* Formulari de contacte */
+.formulari-contacte 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ============================================
+   CAPÇALERA I NAVEGACIÓ
+   ============================================ */
+
+.flex-bar {
+  background: #000000;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.menu-icon a {
+  font-size: 35px;
+  margin: 0 10px;
+  color: #ffffff;
+}
+
+.menu-nav {
+  background: #111;
+  width: 100%;
+  position: absolute;
+  left: -100%;
+  top: 80px;
+  transition: all 0.3s ease;
+}
+
+.menu-ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.menu-item:hover {
+  background: #333;
+}
+
+.menu-nav.animate {
+  left: 0;
+}
+
+/* Vista responsive - escriptori */
+@media (min-width: 720px) {
+  .menu-icon {
+    display: none;
+  }
+  .menu-nav {
+    position: static;
+    background: none;
+  }
+  .menu-ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .menu-item a {
+    padding: 20px;
+  }
+}
+
+/* ============================================
+   SECCIÓ INICIAL 
+   ============================================ */
+
+.skate-inici {
+  background: url("imatges/tony\ hawk.jpeg") center/cover no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.skate-inici h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.skate-inici p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.skate-inici-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 14px;
+}
+
+/* ============================================
+   SECCIONS GENERALS
+   ============================================ */
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.info,
+.sobre {
+  background: #ffffff;
+  color: #333;
+}
+
+.info-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.info-text {
+  flex: 2;
+  text-align: left;
+  font-size: 1.08em;
+  line-height: 1.7;
+}
+.info-text ul {
+  margin-left: 1.2em;
+}
+.info-img {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.info-img img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+}
+@media (max-width: 900px) {
+  .info-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .info-img {
+    justify-content: center;
+    margin-bottom: 1.2rem;
+  }
+  .info-img img {
+    max-width: 90vw;
+  }
+}
+
+/* ============================================
+  SECCIÓ "QUÈ FEM?"
+   ============================================ */
+
+.content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.intro-column {
+  flex: 1;
+  background: linear-gradient(135deg, #ff7715 0%, #ff9c42 100%);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(255, 119, 21, 0.2);
+}
+
+.intro-column p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 500;
+}
+
+.main-column {
+  flex: 1.2;
+  text-align: left;
+}
+
+.main-column h3 {
+  color: #ff7715;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #ff7715;
+  padding-left: 1rem;
+}
+
+.main-column p {
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.main-column ul.modalitats {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.main-column ul.modalitats li {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+  color: #555;
+}
+
+.main-column ul.modalitats li:before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #ff7715;
+  font-weight: bold;
+}
+
+/* Responsiu: dues columnes a escriptori, una columna a mòbil */
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .intro-column {
+    padding: 1.5rem;
+  }
+
+  .intro-column p {
+    font-size: 1rem;
+  }
+
+  .main-column h3 {
+    font-size: 1.3em;
+  }
+
+  .main-column ul.modalitats li {
+    padding-left: 1.8rem;
+  }
+}
+
+.historia {
+  background: #e6e6e6;
+  color: #333;
+}
+
+/* ============================================
+   SECCIÓ CONTACTE
+   ============================================ */
+
+.contacte {
+  background: #b8b6b6;
+  color: #000000;
+}
+
+.contacte a {
+  color: #ff4d00;
+}
+
+.xarxes {
+  margin-top: 15px;
+}
+
+.xarxes a {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.xarxes a:hover {
+  color: #ff4d00;
+}
+
+/* ============================================
+   BOTÓ D'ACCIÓ
+   ============================================ */
+
+.btn {
+  margin-left: 20px;
+  background: #ff7715;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #d8b150;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background: #000;
+  color: #bbb;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+/* ============================================
+   LOGO SKATE - ANIMACIÓ SPRITE
+   ============================================ */
+
+.Logo-Skate {
+  width: 90px;              
+  height: 65px;            
+  background-image: url("imatges/Bomboclat.png");
+  background-size: 70px 2160px; 
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+  animation: sprite-walk 2.5s steps(36) infinite;
+}
+
+@keyframes sprite-walk {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -2160px;
+  }
+}
